@@ -150,7 +150,7 @@ export class MyApp {
           // this.nav.push(DetailsPage, { message: data.message });
 
           console.log('Push notification clicked');
-          this.presentToast();
+          this.presentToast(notification.message);
           // alert('ok i am clicked')
 
         }
@@ -164,10 +164,10 @@ export class MyApp {
   }
 
 
-  presentToast() {
+  presentToast(msg) {
     let toast = this.toastCtrl.create({
-      message: 'User was added successfully',
-      duration: 3000,
+      message: msg,
+      duration: 5000,
       position: 'top'
     });
 
